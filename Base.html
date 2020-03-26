@@ -9,8 +9,8 @@
         <h1>Premier pas en html les règles de bases</h1>
         <p>Voici un guide en 3 étapes pour bien commencer en programmation html</p>
         <fieldset id="stepOne">
-            <legend>ETAPE 1</legend>
-            <p>La première chose à faire lorsqu’on créer une page web est de créer un fichier html :</p>
+            <legend>ETAPE 1: Création d'un fichier html</legend>
+            <h2>La première chose à faire lorsqu’on créer une page web est de créer un fichier html :</h2>
             <p>Pour cela il est possible d’utiliser un logiciel de traitement de texte ou de codage.
                Oui on peut utiliser note par exemple. Pour le nom du fichier le choix est libre mais 
                généralement on le nommera index.html. Il est important de préciser que l’extension .html 
@@ -18,29 +18,33 @@
             </p>
         </fieldset>
         <fieldset id="stepTwo">
-            <legend>ETAPE 2</legend>
-            <p>Maintenant vous pouvez commencer à écrire votre code, enfin pas tout à fait car vous devez mettre la structure de base commun à tout fichier html :</p>
+            <legend>ETAPE 2:Mettre en place le code initial</legend>
+            <h2>Maintenant vous pouvez commencer à écrire votre code, enfin pas tout à fait car vous devez mettre la structure de base commun à tout fichier html :</h2>
             <p>
-                <code><!DOCTYPE html></code> doit être la première ligne de votre fichier html. Elle précise au navigateur quel langage
+                <span class="codeline">&lt!DOCTYPE html&gt</span> doit être la première ligne de votre fichier html. Elle précise au navigateur quel langage
                  va être utilisé car en effet il existe une multitude de langages différents pour coder une page web. Cette ligne nous
-                 permet de nous assurer que le navigateur interprète correctement la syntaxe de notre code.
+                 permet de nous assurer que le navigateur interprète correctement la syntaxe de notre code. Enfin le dernier point important
+                 sont les attributs: il s'agit d'une sorte d'option qui peut être ajouté dans une balises pour définir certaines propriétés.
+                 ex: <span class="codeline">&ltmeta charset="utf-8" /&gt</span> ici « meta » est une balise qui possède un attribut « charset »
+                 qui a pour valeur « utf-8 ». Bien q'un attribut reste optionel il doit être nécessairement associé à une valeur sinon il devient inutil.
             </p>
             <p>
-                &lthtml>&lt/html&gt Ce petit bout de code s’appel une balise et est constituée de 1 à 2 éléments : pour les balises classiques elles 
-                se compose d’une balise ouvrante &lthtml&gt et d’une balise fermante &lt/html&gt. Ainsi les caractéristiques de la balise 
+                <span class="codeline">&lthtml>&lt/html&gt</span> Ce petit bout de code s’appel une balise et est constituée de 1 à 2 éléments : pour les balises classiques elles 
+                se compose d’une balise ouvrante &lthtml&gt et d’une balise fermante <span class="codeline">&lt/html&gt</span>. Ainsi les caractéristiques de la balise 
                 s’appliquerons à tous les éléments situer entre les 2 élément de la balise. Il existe aussi des balises auto-fermantes : Ces balises sont 
-                constituées d’un seul élément ex : &ltmeta /&gt bien que pour ces balises le cractère « / » n’est pas indispensable il est recommandé de l’utiliser 
+                constituées d’un seul élément ex : <span class="codeline">&ltmeta /&gt</span> bien que pour ces balises le cractère « / » n’est pas indispensable il est recommandé de l’utiliser 
                 car il peut être nécessaire pour être compris par certains navigateurs. Les balises auto-fermantes servent à définir des caractéristiques 
                 supplémentaires au sein de la balises parent. Ainsi elle se trouve nécessairement incluse dans une balise classique qui est alors appelé parent. 
-                Enfin la balise &lthtml&gt délimite l’espace qui contiendra votre code html et est donc généralement placer en deuxième ligne juste après &lt!DOCTYPE&gt.
+                Enfin la balise <span class="codeline">&lthtml&gt</span> délimite l’espace qui contiendra votre code html et est donc généralement placer en deuxième ligne juste 
+                après <span class="codeline">&lt!DOCTYPE&gt</span>.
             </p>
         </fieldset>
         <fieldset id="stepThree">
-            <legend>ETAPE 3</legend>
-            <p>Désormais tout est en place pour que vous puissiez commencer à écrire votre code, mais avant de vous précipiter voici les règles générales d’écriture à respecter :</p>
+            <legend>ETAPE 3: Structurer son code</legend>
+            <h2>Désormais tout est en place pour que vous puissiez commencer à écrire votre code, mais avant de vous précipiter voici les règles générales d’écriture à respecter :</h2>
             <p>
                 Avec ce qui a était vu précédemment votre code devrai ressembler à ça :
-                <pre>
+                <pre class="codeline">
                     &lt!DOCTYPE html&gt
                     &lthtml&gt
                         &lthead&gt

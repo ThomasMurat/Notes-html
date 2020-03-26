@@ -1,4 +1,4 @@
-h1, p
+h1, h1 + p
 {
     text-align: center;
 }
@@ -7,19 +7,24 @@ h1, p
     color: deeppink;
     margin-left: 43%;
 }
-#subListHtml
+#subListHtml a, #subListHtml li
 {
     color: rgb(218, 179, 24);
 }
-#subListCss 
+#subListCss a, #subListCss li 
 {
    color: brown; 
 }
-#subListGit
+#subListGit a, #subListGit li 
 {
     color: darkblue;
 }
-#subListLink
+#subListLink a, #subListLink li 
 {
     color: darkgreen;
+}
+.codeline
+{
+    color: white;
+    background-color: black;
 }
