@@ -2,7 +2,24 @@ h1, p
 {
     text-align: center;
 }
-.list 
+#mainList 
 {
+    color: deeppink;
     margin-left: 43%;
+}
+#subListHtml
+{
+    color: rgb(218, 179, 24);
+}
+#subListCss 
+{
+   color: brown; 
+}
+#subListGit
+{
+    color: darkblue;
+}
+#subListLink
+{
+    color: darkgreen;
 }
