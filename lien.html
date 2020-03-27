@@ -6,6 +6,72 @@
         <link type="text/css" rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>Les différents type de lien et leur fonctionnement en html</h1>
+        <h1>Comment mettre des liens dans une page html</h1>
+        <p>Sur cette page nous allons apprendre à créer des liens vers d’autres pages de votre site ou vers un site externe, mais aussi vers une partie de votre page.</p>
+        <fieldset id="stepOne">
+            <legend>ETAPE 1: Les ancres</legend>
+            <h2>Commençons par le premier type de lien : les liens internes </h2>
+            <p>
+                Pour créer un lien on utilise la balise d’ancrage « a ». Cette balise permet de définir un lien ou une ancre tout dépend 
+                de l’attribut utilisé. Pour créer un lien interne nous aurons besoin d’utilisé cette balise deux fois : l’une sera la balise 
+                de départ, et l’autre la balise d’arriver. La balise de départ comprend toujours l’attribut « href » dont la valeur permet de 
+                cibler la balise d’arriver. Pour cibler une balise d’arriver il faut déjà qu’elle existe, mais il faut aussi lui donner un 
+                nom grâce à l’attribut « name » dont la valeur sera constituée par le nom de notre ancre qui doit être unique afin de l’identifier. 
+                Pour lier nos deux balises il nous reste plus qu’à faire correspondre la valeur de « href » de notre balise de départ, avec 
+                la valeur de « name » de notre balise d’arriver, attention le nom doit être précédé du caractère ((pour la valeur de « href ». 
+                Ainsi si l’on clique sur le lien définit par notre balise de départ nous seront redirigé vers la balise d’arriver. Enfin il 
+                est possible qu’une balise d’arriver soit aussi une balise de départ il suffit de lui ajouter l’attribut « href ».
+                Ex : 
+                <pre class="codeline">
+                    &lta href="#monancredarriver" name="monancrededepart"&gtMon lien de départ&lt/a&gt
+                    &lta href="#monancrededepart" name="monancredarriver"&gtMon lien d’arriver&lt/a&gt
+                </pre>
+                Dans cet exemple si l’on clique sur le texte « mon lien de départ » on est redirigé vers le texte « Mon lien d’arriver » et 
+                si l’on clique dessus on sera redirigé à nouveau vers le texte « Mon lien de départ ».
+            </p>
+        </fieldset>
+        <fieldset id="stepTwo">
+            <legend>ETAPE 2:Les lien vers d'autres pages</legend>
+            <h2>Voyons maintenant Le deuxième type de lien : les liens externes</h2>
+            <p>
+                Voyons maintenant Le deuxième type de lien : les liens externes
+                Les liens externes permettent de cibler une autre page que celle où se trouve notre lien. Pour ce faire on utilise la même balise 
+                que pour les liens internes. Le fonctionnement est le même si ce n’est qu’il n’est pas nécessaire d’avoir une balise d’arriver. 
+                Pour faire le lien il suffit d’indiquer l’adresse de la page d’arriver dans « href ». Le tout est de savoir bien écrire l’adresse 
+                de la page visée. Il y a en réalité 2 types d’adresse (en plus des adresse interne vu précédemment) : les adresse web dans ce cas 
+                il suffit de copier l’adresse internet (url) de la page visée et de l’insérer tel quel dans la valeur de « href », et il y a les 
+                adresses locales. Pour les adresses locales il faut faire attention car on se situe dans le dossier qui contient notre page web de 
+                départ et on doit indiquer où se situe le fichier correspondant la page d’arriver par rapport à notre dossier de départ. Ainsi si 
+                le fichier est dans le même dossier il suffit de renseigner le nom de notre fichier (sans oublier l’extension) dans « href ». 
+                Si le fichier est dans un sous-dossier de notre dossier de départ il suffit d’écrire : « /nomdusousdossier/nompagedarriver.extention »
+                Toutefois si notre fichier ne se trouve pas dans le dossier d’arriver mais dans le dossier parent ou l’un de ses sous-dossier il faudra 
+                écrire : « ../ » puis le reste de l’adresse. Mais il est conseillé de placer tous les fichiers nécessaires au bon fonctionnement de 
+                votre page dans le même dossier. Enfin il est possible ciblé une ancre dans une autre page, pour ce faire il suffit de connaître le 
+                nom de l’ancre d’arriver et de l’ajouter au reste de l’adresse précédé du caractère )). Ex :
+                <span class="codeline">&lta href="url#nomdelancre"&gttexte du lien&lt/a&gt</span>
+            </p>
+        </fieldset>
+        <fieldset id="stepThree">
+            <legend>ETAPE 3: Les attributs des liens</legend>
+            <h2>Pour finir nous allons voir quelles options peuvent être ajoutés à nos liens pour les différencier.</h2>
+            <p>
+                Bien que le texte des liens ainsi que le texte qui les entourent soit généralement explicites cela ne les rend pas forcément plus lisibles. 
+                La première chose que l’on peut faire est d’afficher un texte au survol du lien, pour cela on utilise « title » dont la valeur sera le texte 
+                affiché. Enfin il nous est possible de changer la couleur des liens. Pour changer la couleur des liens il faut d’abord noter qu’il existe 
+                2 types de liens : les liens actifs et les liens visités pour modifier leur couleur on utilise les attribut « Alink » et « Vlink » à noter 
+                qu’il existe aussi « Link » qui s’appliquera aux liens non vérifiés par le navigateur, il suffit de donner une couleur comme valeur à ces 
+                attributs pour l’appliquer au type de lien souhaité. Attention ces attributs doivent être placer dans la balise « body » et s’applique à 
+                tous les liens, pour modifier l’apparence des liens on privilégiera du code CSS.
+            </p>
+        </fieldset>
+        <fieldset id="conclusion">
+            <legend>Conclusion</legend>
+            <p>
+                Voilà ! Vous savez à peu près tout sur le fonctionnement des liens. Vous pouvez déjà faire pas mal de choses, mais tout cela reste assez 
+                simple pour le moment. Nous allons donc poursuivre avec un nouvel élément de structure un peu plus complexe :
+                <a href="Table.html">les tableaux</a>.<br /> 
+                Ou si vous voulez revoir d’autres point revenez à la <a href="main.html">page principal</a>. 
+            </p>
+        </fieldset>
     </body>
 </html>
