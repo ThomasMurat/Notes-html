@@ -7,5 +7,77 @@
     </head>
     <body>
         <h1>Créer des listes ordonnées et non ordonnées en html</h1>
+        <p>Sur cette page vous aller apprendre à créer des listes et à leur donner la structure que vous souhaiter</p>
+        <fieldset id="stepOne">
+            <legend>ETAPE 1: Les listes non-ordonées</legend>
+            <h2>Commençons par le premier type de liste : La liste non ordonnée (dite à puces). </h2>
+            <p>
+                Pour créer une liste non ordonnée on utilise la balise « ul » dans laquelle nous placeront notre liste. Une liste est composée 
+                de 2 éléments : La balise « ul » qui délimite la liste et la balise « li » qui délimite un élément de la liste. La seule règle 
+                à respecter est qu’une balise « li » doit toujours se placer dans une balise « ul » (ou « ol » que nous verrons juste après). 
+                Enfin bien que terme « non ordonnée » soit utilisé cela concerne que la présentation de la liste, chaque élément de la liste 
+                sera précédé d’une puce identique lors de l’affichage. Toutefois les éléments de la liste s’afficherons bien dans l’ordre que 
+                vous avez utilisé dans votre code.
+            </p>
+        </fieldset>
+        <fieldset id="stepTwo">
+            <legend>ETAPE 2:Les listes ordonnées</legend>
+            <h2>Voyons maintenant Le deuxième type de liste : les listes ordonnées.</h2>
+            <p>
+                Pour créer une liste ordonnée on utilise la balise « ol » dans laquelle nous placeront notre liste. Comme la balise « ul », 
+                la balise « ol » délimite la liste et la balise « li » délimite un élément de la liste. La règle est donc la même que pour 
+                la liste « ul ». La seule différence ici est qu’à la place des puces (un point par exemple) les éléments de notre liste seront 
+                précédés d’un numéro : le premier élément sera précédé d’un 1 le second d’un 2 et ainsi de suite. C’est cette propriété qui 
+                justifie le caractère ordonné de la liste. 
+            </p>
+        </fieldset>
+        <fieldset id="stepThree">
+            <legend>ETAPE 3: Listes et sous-listes</legend>
+            <h2>Maintenant que nous connaissons les 2 type de liste nous pouvons voir comment les imbriquer les unes dans les autres :</h2>
+            <p>
+                Pour rappel la règle est qu’une balise « li » doit nécessairement être placer dans une balise « ul » ou « ol ». Mais il n’y a pas 
+                de restriction sur les balises « ol » et « ul », vous pouvez donc placer votre liste dans un paragraphe ou après, vous pouvez la 
+                placer dans un encadré, mais le plus intéressant est que l’on peut la placer dans une balise « li ». Lorsque l’on place une balise 
+                « ul » (ou « ol ») dans une balise « li » on créer une sous-liste : notre nouvelle liste s’affichera sous l’élément de la liste dans 
+                laquelle elle est imbriqué et l’élément suivant de la liste principale sera affiché après notre nouvelle liste. Aussi je rappel encore 
+                une fois qu’il sera très important de respecter les règles d’espacement et d’alignement des balises pour que votre code reste compréhensible. 
+                Voici donc un exemple de liste non ordonnées comportant une sous-liste ordonnée : 
+                <pre class="codeline">
+                    &ltul&gtMa liste principale
+                        &ltli&gtPremier élément de la liste principale&lt/li&gt
+                        &ltli&gt
+                            &ltol&gtdeuxième élément de la liste principale
+                                &ltli&gtpremier élément de ma sous liste&lt/li&gt
+                                &ltli&gtdeuxième élément de ma sous liste&lt/li&gt
+                            &lt/ol&gt
+                        &lt/li&gt
+                        &ltli&gttroisième élément de ma liste principale&lt/li&gt
+                    &lt/ul&gt
+                </pre>
+            </p>
+        </fieldset>
+        <fieldset id="stepFour">
+            <legend>ETAPE 4: Les attributs des listes</legend>
+            <h2>Tout ce que nous avons vu est très intéressant mais comment faire si je veux ordonnée ma liste avec des lettre ou changer la forme des puces de ma liste non ordonnée ? </h2>
+            <p>
+                Pour faire cela nous devons nous intéresser aux attributs des balises « ul » et « ol ». Pour rappel un attribut se définit par un nom et 
+                une valeur et se place avant la fermeture du premier élément de la balise. Le premier attribut qui peut nous intéresser est l’attribut 
+                « title » dont la valeur sera le titre qui s’affichera au survol de la liste. Ex : <span calass="codeline">&ltul title="Ceci est une liste"&gt</span>. L’autre attribut 
+                intéressant est l’attribut « type » qui permet de définir le type de puces que l’on souhaite afficher. Ex : <span calass="codeline">&ltul type="square"&gt</span> affichera 
+                les éléments de notre liste avec des puces carré et <span calass="codeline">&ltol type="a"&gt</span> listera nos éléments avec les lettres de l’alphabet dans l’ordre. 
+                Enfin il existe de nombreuses valeurs pour chaque attribut et peuvent être différents si l’on est dans une balise « ol » ou « ul », 
+                par exemple l’attribut « start » ne fonctionne qu’avec les balises « ol » car elle permet de préciser à partir de quand on commence 
+                à ordonner notre liste : <span calass="codeline">&ltol start="3"&gt</span> fera que le premier élément de notre liste sera numéroté 3 et non 1 comme par défaut. 
+            </p>
+        </fieldset>
+        <fieldset id="conclusion">
+            <legend>Conclusion</legend>
+            <p>
+                Voilà ! Vous savez à peu près tout sur le fonctionnement des listes, même s’il reste beaucoup à découvrir sur les attributs et leurs valeurs, 
+                je vous laisse découvrir ça par vous-même. Mais cela reste frustrant car un peut plus et l’on pourrait créer un sommaire, pour cela il nous 
+                reste à découvrir comment <a href="lien.html">créer des liens</a>.<br /> 
+                Ou si vous voulez revoir d’autres point revenez à la <a href="main.html">page principal</a>. 
+            </p>
+        </fieldset>
     </body>
 </html>
