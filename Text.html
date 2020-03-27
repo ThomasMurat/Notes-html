@@ -6,6 +6,82 @@
         <link type="text/css" rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>Ce q'il faut faire pour bien structurer sont texte en html</h1>
+        <h1>Ce qu'il faut faire pour bien structurer sont texte en html</h1>
+        <p>Sur cette page vous aller apprendre comment structurer votre texte sur une page web en 4 étapes</p>
+        <fieldset id="stepOne">
+            <legend>ETAPE 1: Les balises de forme</legend>
+            <h2>La première chose à connaître pour structurer un texte sur une page html sont les balises « head », « body » et « foot » :</h2>
+            <p>
+                Pour commencer à rédiger une page web il est nécessaire de distinguer 3 espaces important : « l’entête », « le corp » de la page 
+                et le « pied de page ». Ces trois espaces sont définis respectivement par les balises « head », « body » et « foot ». La balises 
+                « head » permet de définir des propriétés qui seront appliqué à l’ensemble de la page et comporte toujours une balise « title » 
+                dans laquelle on peut écrire un texte qui s’affichera au niveau de l’onglet dans un navigateur. La balise « body » permet d’afficher 
+                le contenue de la page, c’est donc dans cette balise que nous placerons l’essentiel de notre texte. Ces deux balises sont donc présente 
+                dans tout fichier html qui veut être afficher par un navigateur. La balise foot quant à elle n’est pas obligatoire et nous ne l’utiliseront 
+                pas ou très peu dans ce cours. Enfin le dernier élément de base est la balise <span class="codeline">&ltmeta charset= « utf-8 » /&gt</span>, 
+                celle-ci permet de préciser l’alphabet qui sera utilisé, ici on utilise l’alphabet utf-8 car il permet que le navigateur prenne en compte 
+                les caractères spéciaux comme les accents. On placera donc cette balise dans la balise « head » de sorte que cette propriété soit appliquée 
+                à toute la page.
+            </p>
+        </fieldset>
+        <fieldset id="stepTwo">
+            <legend>ETAPE 2:Structure des titres</legend>
+            <h2>Maintenant que nos espaces d’écritures sont définis on peut commencer par mettre des titres :</h2>
+            <p>
+                Pour écrire un titre on commence tout d’abord par se placer dans la balise « body »., c’est dans cette balises que nous allons écrire nos titres. 
+                Pour les titres on utilise les balises « hx » x étant un nombre entier qui définira la hiérarchisation de notre titre, 1 désignant le titre
+                le plus important. « h1 » est communément unique à chaque page. Pour les titres suivant « h2 », « h3 », … « hn », on peut avoir plusieurs
+                titres du même ordre. Il y a une seule règle pour les titres « hn » peut exister si et seulement si « h(n-1) » existe. Enfin il est bien 
+                vu de tabuler « h(n-1) » par rapport à « hn » et d’aligner les différents « hn » entre eux pour respecter la règle de lisibilité vue dans 
+                le premier chapitre. Voici à quoi peut désormais ressembler votre code :
+                <pre class="codeline">
+                    &lt!DOCTYPE html&gt
+                    &lthtml&gt
+                        &lthead&gt
+                            &ltmeta charset="utf-8" /&gt
+                            &lth1&gtTitre onglet&lt/h1&gt
+                        &lt/head&gt
+                        &ltbody&gt
+                            &lth1>Ma première page en html&lt/h1&gt
+                                &lth2>Mes premières sensations&lt/h2&gt
+                                &lth2>Mes questions&lt/h2&gt
+                       &lt/body&gt
+                    &lt/html>
+                </pre>
+            </p>
+        </fieldset>
+        <fieldset id="stepThree">
+            <legend>ETAPE 3: Structure des paragraphes</legend>
+            <h2>Les titres sont en place il est temps d’écrire votre premier paragraphe :</h2>
+            <p>
+                Pour écrire un paragraphe on utile la balise « p », il suffit de taper votre texte entre les 2 éléments de cette balise. Bien sûr cela 
+                ne s’arrête pas là. En effet généralement on ne se contente pas d’écrire un seul paragraphe et ces paragraphes devront aussi être structurés 
+                comme pour les titres. Toutefois contrairement aux titres nous avons un choix à faire ; les balises « px » existent mais ne sont pas obligatoires. 
+                La question que l’on doit se poser est si l’on veut distinguer nos paragraphes les uns des autres, si c’est le cas on utilisera la balise « px », 
+                dans le cas contraire on utilisera la balise « p » pour chaque paragraphe. Ce qui est important avec la structure des paragraphes c’est leur 
+                position dans notre code : ils doivent être associé à un titre et respecter eux aussi les règles d’alignements. 
+            </p>
+        </fieldset>
+        <fieldset id="stepFour">
+            <legend>ETAPE 4: Encadré du texte</legend>
+            <h2>Nous avons notre texte il reste une dernière balise qui peut nous aider à le structurer « fieldset » :</h2>
+            <p>
+                Nous avons nos titres et nos paragraphes mais cela reste assez limité comme structure. La balise « fieldset » permet d’encadré le contenue 
+                qui se trouve entre ses 2 éléments, on peut ainsi reproduire la structure titres-paragraphe au sein de différents encadrés. Ainsi les encadrés 
+                peuvent nous permettre de créer différents documents sur une même page, chaque document étant délimité par la balise « fieldset ». 
+                Attention cette balise ne sert pas spécifiquement à créer des document différent il s’agit plutôt d’un autre outils permettant de 
+                distinguer différentes partie d’une même page web, on peut très bien choisir d’encadré simplement un paragraphe dans notre page. 
+                Enfin cette balise s’accompagne souvent de la balise « legend » qui permet de placer un titre à l’encadré. 
+            </p>
+        </fieldset>
+        <fieldset id="conclusion">
+            <legend>Conclusion</legend>
+            <p>
+                Voilà ! Vous avez appris à structurer votre texte selon vos désirs. Mais dans une page web il est rare qu’il y ait que des titres et des 
+                paragraphes avec des encadrement par-ci, par-là. Allez courage il nous reste encore 2 types de structure textuelle à voir. Le prochain point portera 
+                sur <a href="list.html">la structure des listes</a>.<br /> 
+                Ou si vous voulez revoir d’autres point revenez à la <a href="main.html">page principal</a>. 
+            </p>
+        </fieldset>
     </body>
 </html>
