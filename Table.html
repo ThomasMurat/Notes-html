@@ -7,5 +7,81 @@
     </head>
     <body>
         <h1>Créer et structurer des tableau en html</h1>
+        <p>Sur cette page nous allons apprendre à construire des tableaux de toutes taille mais aussi la fusion de cellule.</p>
+        <fieldset id="stepOne">
+            <legend>ETAPE 1: Structure d'un tableau</legend>
+            <h2>Commençons par déterminer les différentes parties de notre tableau. </h2>
+            <p>
+                Pour créer un tableau bien organisé il nous faut tout d’abord identifier 3 parties : les titre des colonne (le haut du tableau), 
+                le corps de notre tableau (ou se placera le contenue des cellules), et la dernière ligne (qui sert généralement à afficher les 
+                totaux ou autres résultats). Ces 3 partie sont définit respectivement par les balises « thead », « tbody », et « tfoot » ; 
+                « thead » et « tfoot » ne comporte qu’une ligne et ne sont pas strictement nécessaires. Aussi dans le cas où l’on a besoin 
+                ni de « thead » ni de « tfoot », on n’utilisera pas « tbody » mais « table » qui permet de définir un tableau simple (non structuré), 
+                pour faire un tableau structuré on placera nos trois balises dans une balise « table ».
+            </p>
+        </fieldset>
+        <fieldset id="stepTwo">
+            <legend>ETAPE 2:Création des cellules</legend>
+            <h2>Maintenant on peut commencer à définir nos lignes et nos colonnes et ainsi créer nos cellules :</h2>
+            <p>
+                Comme vous devez déjà le savoir un tableau se compose de ligne et de colonne, la question reste dans quel sens doit-on l’écrire. 
+                En html la priorité est donnée aux lignes : on définit d’abord la ligne puis la colonne. Pour ce faire on utilise les balises 
+                « tr » et « td ». « tr » définit une ligne et « td » une colonne, ainsi une balise « td » doit être nécessairement incluse dans 
+                une balise « tr », et le contenue de nos cellules sera insérer entre les 2 éléments d’une balise « td ». Il faut donc comprendre 
+                que chaque « td » définit une cellule. Voici un exemple de tableau simple comportant 3 colonnes et 2 lignes :
+                <pre class="codeline">
+                    &lttable&gt
+                        &lttr&gt
+                            &lttd&gtcellule(l1c1)&lt/td&gt
+                            &lttd&gtcellule(l1c2)&lt/td&gt
+                            &lttd&gtcellule(l1c3)&lt/td&gt
+                        &lt/tr&gt
+                        &lttr&gt
+                            &lttd&gtcellule(l2c1)&lt/td&gt
+                            &lttd&gtcellule(l2c2)&lt/td&gt
+                            &lttd&gtcellule(l2c3)&lt/td&gt
+                        &lt/tr&gt
+                    &lt/table&gt                        
+                </pre>
+            </p>
+        </fieldset>
+        <fieldset id="stepThree">
+            <legend>ETAPE 3: Fusionner des cellules</legend>
+            <h2>Pour continuer il est fréquent dans un tableau de devoir fusionner certaines cellules, voici comment faire :</h2>
+            <p>
+                Il existe 2 directions dans un tableau et donc 2 sens possible pour fusionner des cellules : vertical et horizontal. 
+                Pour fusionner verticalement des cellules il faut utiliser l’attribut « rowspan » et pour la fusion horizontale c’est 
+                « colspan ». Ces attributs se place dans une balise « td » et définit la cellule de départ de la fusion, leur valeur 
+                doit être un nombre entier qui indique le nombre de cellules à fusionner. Attention il y a un sens, « rowspan » effectue 
+                la fusion en partant de la cellule de départ puis en allant vers le bas, même chose pour « colspan » qui lui ira vers la droite. 
+                Ainsi si on veut fusionner 3 cellules horizontalement on placera l’attribut dans la balise « td » de la cellule la plus à gauche. 
+                Enfin une fois la fusion réalisée n’oubliez pas de supprimer de votre code les ligne « td » des cellules supprimées.
+            </p>
+        </fieldset>
+        <fieldset id="stepFour">
+            <legend>ETAPE 4: Mise en forme des tableaux ou des cellules</legend>
+            <h2>Pour terminer notre tableau il nous reste à voir comment on peut le redimensionner :</h2>
+            <p>
+                Il faut savoir que l’on modifie rarement la taille des éléments d’un tableau, non par manque de besoin, mais souvent par dépit. 
+                Cette étape reste cependant intéressante pour ceux qui veulent prendre le temp de finaliser au mieux leur tableau. Pour redimensionner 
+                on utilise 2 attributs : « height » pour la hauteur et « width » pour la largeur. Leur valeur peut être une mesure de l’unité 
+                de notre choix, ou un pourcentage. Pour le pourcentage il est important de savoir que si l’attribut est placé dans une balise 
+                « td » donc une cellule, le pourcentage se basera sur la taille du tableau. Si ces attributs sont placer dans une balise « table » 
+                alors le pourcentage se basera sur la taille de la page. Il est important de savoir que lorsqu’on redimensionne les éléments d’un 
+                tableau les dimensions des colonnes et des lignes doivent correspondre. Enfin il nous reste 2 attributs : « border » et « cellspacing » 
+                qui permettent de modifier les limites entres les cellules. La valeur de « border » définit l’épaisseur du trait qui marque la limite 
+                entre la cellule et sa bordure, la valeur de « border » définit la taille de la bordure qui représente l’espace entre les cellules, 
+                ces attributs se place dans la balise « table ».
+            </p>
+        </fieldset>
+        <fieldset id="conclusion">
+            <legend>Conclusion</legend>
+            <p>
+                Voilà ! Vous pouvez désormais créer le tableau de vos rêves, il est bien sur possible de modifier la couleur ou le style de bordure, 
+                mais je garde toute la partie habillage pour la partie CSS. Il est vrai cela-dit que tous cela manque un peu de couleur, c’est pourquoi 
+                notre chapitre suivant portera sur <a href="Image.html">l’insertion d’images</a>.<br /> 
+                Ou si vous voulez revoir d’autres point revenez à la <a href="main.html">page principal</a>. 
+            </p>
+        </fieldset>
     </body>
 </html>
